@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Auction 2024</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auction.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IPL Auction 2024</h1>
+            <nav>
+                <a href="index.html" class="nav-link active">Auction</a>
+                <a href="players.html" class="nav-link">Players</a>
+                <a href="teams.html" class="nav-link">Teams</a>
+            </nav>
+        </header>
+
+        <div class="auction-controls">
+            <button id="start-auction" class="control-btn">Start Auction</button>
+            <button id="pause-auction" class="control-btn" disabled>Pause</button>
+            <button id="end-auction" class="control-btn" disabled>End</button>
+            <div class="timer" id="timer">30s</div>
+        </div>
+
+        <div class="current-bid" id="current-bid">
+            <h3>Current Bid</h3>
+            <div class="player-name" id="current-player">Player Name</div>
+            <div class="bid-amount" id="current-bid-amount">₹0.00 Cr</div>
+            <div class="team-name" id="current-bidder">Team Name</div>
+        </div>
+
+        <div class="search-filter">
+            <input type="text" id="search" placeholder="Search players...">
+            <select id="filter">
+                <option value="all">All Players</option>
+                <option value="batsman">Batsmen</option>
+                <option value="bowler">Bowlers</option>
+                <option value="allrounder">All-rounders</option>
+                <option value="wicketkeeper">Wicket Keepers</option>
+            </select>
+        </div>
+
+        <div class="auction-container">
+            <div class="player-list">
+                <h2>Available Players</h2>
+                <div id="players-container"></div>
+            </div>
+
+            <div class="team-list">
+                <h2>Teams</h2>
+                <div id="teams-container"></div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div>Total Players</div>
+                <div class="stat-value" id="total-players">0</div>
+            </div>
+            <div class="stat-card">
+                <div>Players Sold</div>
+                <div class="stat-value" id="sold-players">0</div>
+            </div>
+            <div class="stat-card">
+                <div>Total Amount</div>
+                <div class="stat-value" id="total-amount">₹0 Cr</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bid Modal -->
+    <div class="modal" id="bid-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Place Bid</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div id="modal-player-info">
+                <h4>Player: <span id="modal-player-name">Player Name</span></h4>
+                <p>Base Price: <span id="modal-base-price">₹0.00 Cr</span></p>
+                <p>Current Bid: <span id="modal-current-bid">₹0.00 Cr</span></p>
+            </div>
+            <div class="form-group">
+                <label for="bid-amount">Your Bid Amount (in Cr)</label>
+                <input type="number" id="bid-amount" step="0.25" min="0" placeholder="Enter bid amount">
+            </div>
+            <div class="form-group">
+                <label for="bid-team">Select Team</label>
+                <select id="bid-team">
+                    <option value="">Select a team</option>
+                    <!-- Teams will be populated by JavaScript -->
+                </select>
+            </div>
+            <button class="submit-btn" id="submit-bid">Place Bid</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

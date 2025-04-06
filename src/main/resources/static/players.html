@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Players - IPL Auction</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/players.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IPL Auction Players</h1>
+            <nav>
+                <a href="index.html" class="nav-link">Auction</a>
+                <a href="players.html" class="nav-link active">Players</a>
+                <a href="teams.html" class="nav-link">Teams</a>
+            </nav>
+        </header>
+
+        <div class="players-controls">
+            <div class="search-filter">
+                <input type="text" id="search" placeholder="Search players...">
+                <select id="filter-role">
+                    <option value="all">All Roles</option>
+                    <option value="batsman">Batsmen</option>
+                    <option value="bowler">Bowlers</option>
+                    <option value="allrounder">All-rounders</option>
+                    <option value="wicketkeeper">Wicket Keepers</option>
+                </select>
+                <select id="filter-status">
+                    <option value="all">All Statuses</option>
+                    <option value="sold">Sold</option>
+                    <option value="unsold">Unsold</option>
+                </select>
+                <select id="filter-country">
+                    <option value="all">All Countries</option>
+                    <option value="India">India</option>
+                    <option value="Australia">Australia</option>
+                    <option value="England">England</option>
+                    <!-- Add more countries as needed -->
+                </select>
+            </div>
+        </div>
+
+        <div class="players-grid" id="players-container">
+            <!-- Players will be loaded here -->
+            <div class="loading">Loading players...</div>
+        </div>
+    </div>
+
+    <script src="js/players.js"></script>
+</body>
+</html>

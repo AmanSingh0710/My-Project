@@ -1,0 +1,137 @@
+/* Teams Listing Page Styles */
+.teams-controls {
+    margin-bottom: 30px;
+}
+
+.search-filter {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.team-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.team-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.team-info {
+    flex: 1;
+}
+
+.team-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.team-name a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.team-name a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.team-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.team-meta-item {
+    background-color: var(--light);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.team-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.stat-item {
+    font-size: 0.9rem;
+}
+
+.stat-label {
+    color: #7f8c8d;
+}
+
+.stat-value {
+    font-weight: bold;
+}
+
+.trophy-count {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--warning);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.team-players-count {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--success);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .search-filter {
+        grid-template-columns: 1fr;
+    }
+    
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
+}

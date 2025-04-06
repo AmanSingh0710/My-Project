@@ -1,0 +1,234 @@
+/* Auction Page Styles */
+.auction-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.player-list {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-list {
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light);
+}
+
+.player-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background-color: var(--light);
+    transition: all 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.player-info {
+    flex: 1;
+}
+
+.player-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.player-details {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.player-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.bid-btn {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.bid-btn:hover {
+    background-color: #c0392b;
+}
+
+.sold-btn {
+    background-color: var(--success);
+    color: white;
+}
+
+.unsold-btn {
+    background-color: var(--warning);
+    color: white;
+}
+
+.team-card {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: var(--light);
+}
+
+.team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.team-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.team-name:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.team-budget {
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+.team-players {
+    list-style-type: none;
+}
+
+.team-player {
+    padding: 8px 0;
+    border-bottom: 1px dashed #bdc3c7;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-price {
+    color: var(--success);
+    font-weight: bold;
+}
+
+.auction-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.control-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.control-btn:hover {
+    background-color: #1a252f;
+}
+
+.control-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary);
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-filter input, .search-filter select {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.current-bid {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.current-bid h3 {
+    margin-bottom: 10px;
+}
+
+.bid-amount {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .auction-container {
+        flex-direction: column;
+    }
+    
+    .team-list {
+        width: 100%;
+    }
+    
+    .player-details {
+        flex-wrap: wrap;
+        gap: 5px 15px;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}

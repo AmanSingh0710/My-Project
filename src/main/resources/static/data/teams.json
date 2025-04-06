@@ -1,0 +1,59 @@
+[
+    {
+        "id": "MI",
+        "name": "Mumbai Indians",
+        "city": "Mumbai",
+        "owner": "Reliance Industries",
+        "coach": "Mark Boucher",
+        "captain": "Hardik Pandya",
+        "founded": 2008,
+        "homeGround": "Wankhede Stadium",
+        "capacity": "33,108",
+        "primaryColor": "#004BA0",
+        "secondaryColor": "#D1AB3E",
+        "logo": "mi.png",
+        "stadiumImage": "wankhede.jpg",
+        "budget": 80,
+        "players": [],
+        "trophies": 5,
+        "lastTitle": 2020,
+        "stats": {
+            "matches": 231,
+            "wins": 129,
+            "losses": 98,
+            "ties": 4,
+            "winPercentage": 55.84,
+            "highestScore": "223/6",
+            "lowestScore": "87 all out"
+        }
+    },
+    {
+        "id": "CSK",
+        "name": "Chennai Super Kings",
+        "city": "Chennai",
+        "owner": "India Cements",
+        "coach": "Stephen Fleming",
+        "captain": "MS Dhoni",
+        "founded": 2008,
+        "homeGround": "MA Chidambaram Stadium",
+        "capacity": "39,000",
+        "primaryColor": "#FDB913",
+        "secondaryColor": "#004BA0",
+        "logo": "csk.png",
+        "stadiumImage": "chepauk.jpg",
+        "budget": 80,
+        "players": [],
+        "trophies": 4,
+        "lastTitle": 2021,
+        "stats": {
+            "matches": 225,
+            "wins": 131,
+            "losses": 91,
+            "ties": 3,
+            "winPercentage": 58.89,
+            "highestScore": "246/5",
+            "lowestScore": "79 all out"
+        }
+    }
+   
+]

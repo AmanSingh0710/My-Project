@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Teams</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/teams.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IPL Teams</h1>
+            <nav>
+                <a href="index.html" class="nav-link">Auction</a>
+                <a href="players.html" class="nav-link">Players</a>
+                <a href="teams.html" class="nav-link active">Teams</a>
+            </nav>
+        </header>
+
+        <div class="teams-controls">
+            <div class="search-filter">
+                <input type="text" id="search" placeholder="Search teams...">
+                <select id="filter-trophies">
+                    <option value="all">All Teams</option>
+                    <option value="5">5+ Trophies</option>
+                    <option value="3">3+ Trophies</option>
+                    <option value="1">1+ Trophy</option>
+                    <option value="0">No Trophies</option>
+                </select>
+                <select id="sort-by">
+                    <option value="name">Sort by Name</option>
+                    <option value="trophies">Sort by Trophies</option>
+                    <option value="wins">Sort by Wins</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="teams-grid" id="teams-container">
+            <div class="loading">Loading teams...</div>
+        </div>
+    </div>
+
+    <script src="js/teams.js"></script>
+</body>
+</html>

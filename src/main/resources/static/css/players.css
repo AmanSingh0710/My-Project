@@ -1,0 +1,138 @@
+/* Players Page Specific Styles */
+.players-controls {
+    margin-bottom: 30px;
+}
+
+.search-filter {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.player-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.player-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.player-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--light);
+}
+
+.player-info {
+    flex: 1;
+}
+
+.player-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.player-name a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.player-name a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.player-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.player-meta-item {
+    background-color: var(--light);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.player-price {
+    font-weight: bold;
+    color: var(--success);
+}
+
+.player-status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.status-sold {
+    background-color: var(--success);
+    color: white;
+}
+
+.status-unsold {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.player-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.stat-item {
+    font-size: 0.9rem;
+}
+
+.stat-label {
+    color: #7f8c8d;
+}
+
+.stat-value {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .search-filter {
+        grid-template-columns: 1fr;
+    }
+    
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+}
