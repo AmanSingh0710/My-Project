@@ -32,6 +32,28 @@ public class AuthController {
      public ResponseEntity<User> registerUser(@RequestBody User user) {
          return ResponseEntity.ok(userService.registerUser(user));
      }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody AuthRequest authRequest) {
+        try{
+        // Authenticate user credentials
+        authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
+        );
+
+        // Load user details
+        UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getUsername());
+
+        // Generate JWT token
+        String token = jwtUtil.generateToken(userDetails.getUsername());
+
+        // Return token in response
+        return ResponseEntity.ok(token);
+
+       }catch (BadCredentialsException e) {
+        return ResponseEntity.status(401).body("Invalid Username or Password");
+       }
+    }
     
 }
 
