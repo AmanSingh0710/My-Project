@@ -23,24 +23,15 @@ public class AuthController {
     @Autowired
     private UserDetailsService userDetailsService;
 
-    /**
-     * Authenticate user and generate JWT token
-     */
-    @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody AuthRequest authRequest) {
-        // Authenticate user credentials
-        authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
-        );
+    @Autowired
+    private UserService userService;
 
-        // Load user details
-        UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getUsername());
+     //Authenticate user and generate JWT token
 
-        // Generate JWT token
-        String token = jwtUtil.generateToken(userDetails.getUsername());
-
-        // Return token in response
-        return ResponseEntity.ok(token);
-    }
+     @PostMapping("/register")
+     public ResponseEntity<User> registerUser(@RequestBody User user) {
+         return ResponseEntity.ok(userService.registerUser(user));
+     }
+    
 }
 
